@@ -9,7 +9,18 @@ body {
   display: flex;
 }
 
-
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  width: auto;
+  height: 100vh; /*This ensures that all height is taken: no white space*/
+  min-height: 780px;
+  height: auto; /*Height grows as more products are added*/
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 10px;
+  display: flex;
+}
 
 .top-container {
   width: 100%;
