@@ -170,7 +170,7 @@
         margin-right: 10px;
         margin-bottom: 17px;
         width: 370px;
-        height: 2220px;
+        height: 1980px;
         transition: 0.5s ease-in-out;
       }
       .products-container-1:hover {
@@ -185,11 +185,14 @@
         border-top-right-radius: 10px;
       }
       .products-container-1-body {
+        display: flex;
         width: 368px;
-        height: 2160px;
+        height: 1920px;
         background-color: rgb(245, 245, 245);
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
+        flex-direction: column;
+        align-items: center;
       }
 
       .products-container-2 {
@@ -217,6 +220,9 @@
         background-color: rgb(245, 245, 245);
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       
 
@@ -273,6 +279,80 @@
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
       }
+
+
+      .product-info-dev-1 {
+        margin-top: 20px;
+        width: 331px;
+        height: 345px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        border: 1px solid rgb(216, 216, 216);
+        transition: 0.6s ease-in-out;
+        color: black;
+      }
+      .product-info-dev-1:hover {
+        transform: scale(1.06);
+      }
+      .product-info-dev-1-style-top {
+        width: 298px; 
+        height: 60px; 
+        border-bottom: 2px solid rgb(212, 212, 212);
+        margin-top: 3px; 
+        margin-left: 14px;
+        margin-right: 14px;
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+      }
+      .product-info-dev-1-style-bottom {
+        width: 298px; 
+        height: 190px;
+        border-bottom: 2px solid rgb(212, 212, 212);
+        margin-top: 3px; 
+        margin-left: 14px;
+        margin-right: 14px;
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+      }
+      .cancel-button {
+        width: 140px; 
+        height: 40px;
+        color: rgb(212, 3, 3);
+        font-family: Arial;
+        font-weight: bolder;
+        border: 0.2px solid red;
+        border-radius: 10px;
+        margin-top: 22px;
+        margin-left: 18px;
+        margin-bottom: 18px;
+        background-color: white;
+        cursor: pointer;
+      }
+      .cancel-button:hover {
+        background-color: rgb(255, 243, 243);
+        transition: 0.2s ease-in-out;
+        box-shadow: 0px 0px 5px rgb(247, 183, 183);
+      }
+      .accept-button {
+        width: 140px; 
+        height: 40px;
+        color: white;
+        font-family: Arial;
+        font-weight: bolder;
+        border: none;
+        border-radius: 10px;
+        margin: 10px;
+        background-color: rgb(25, 118, 210);
+        box-shadow: 0px 0px 2px gray;
+        cursor: pointer;
+      }
+      .accept-button:hover {
+        background-color: rgb(8, 104, 201);
+        transition: 0.3s ease-in-out;
+        box-shadow: 0px 0px 5px gray;
+      }
     </style>
   </head>
 
@@ -322,19 +402,205 @@
             </div>
           </div>   
           
+
           <div class="bottom-right-lower-div">
             <div class="products-container-1">
               <div class="products-container-1-head">
                 <p style="font-size: 25px; margin: 15px; color: white; font-family: Arial;">New (5)</p>
               </div>
-              <div class="products-container-1-body"></div>
+              <div class="products-container-1-body">
+                <div class="product-info-dev-1">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321540
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 560 Sum</p>
+                    <img src="/nefilyApp/images/payme-icon.png" style="width: 17px; height: 17px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">3 x Pepsi 0.5</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Hamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">15:22</p>
+                    </div>
+                  </div>
+                  
+                  <button class="cancel-button"> 
+                    CANCEL
+                  </button>
+                  <button class="accept-button">ACCEPT</button>
+                </div>
+
+                <div class="product-info-dev-1">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321541
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <img src="/nefilyApp/images/apelsin-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">3 x Pepsi 0.5</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Hamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:20</p>
+                    </div>
+                  </div>
+                  
+                  <button class="cancel-button">CANCEL</button>
+                  <button class="accept-button">ACCEPT</button>
+                </div>
+
+                <div class="product-info-dev-1">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321542
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <img src="/nefilyApp/images/card-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">3 x Pepsi 0.5</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Hamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:20</p>
+                    </div>
+                  </div>
+
+                  <button class="cancel-button">CANCEL</button>
+                  <button class="accept-button">ACCEPT</button>
+                </div>
+
+                <div class="product-info-dev-1" style="height: 415px;">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321543
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <img src="/nefilyApp/images/cash-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/walk-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom" style="height: 260px;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Big Gamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">4 x Pepsi 0.5</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Double Burger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:20</p>
+                    </div>
+                  </div>
+
+                  <button class="cancel-button">CANCEL</button>
+                  <button class="accept-button">ACCEPT</button>
+                </div>
+
+                <div class="product-info-dev-1">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321544
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <img src="/nefilyApp/images/click-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">3 x Pepsi 0.5</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Hamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">08:00</p>
+                    </div>
+                  </div>
+
+                  <button class="cancel-button">CANCEL</button>
+                  <button class="accept-button">ACCEPT</button>
+                </div>
+
+              </div>
             </div>
 
             <div class="products-container-2">
               <div class="products-container-2-head">
                 <p style="font-size: 25px; margin: 15px; color: white; font-family: Arial;">Blank (3)</p>
               </div>
-              <div class="products-container-2-body"></div>
+              <div class="products-container-2-body">
+                <div class="product-info-dev-1" style="min-height: 365px;">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 320648
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <img src="/nefilyApp/images/card-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom" style="height: 130px;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Hamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:20</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-info-dev-1">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321542
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <img src="/nefilyApp/images/card-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">3 x Pepsi 0.5</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Hamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:20</p>
+                    </div>
+                  </div>
+
+                  <button class="cancel-button">CANCEL</button>
+                  <button class="accept-button">ACCEPT</button>
+                </div>
+
+
+              </div>
             </div>
 
             <div class="products-container-3">
