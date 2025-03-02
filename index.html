@@ -3,357 +3,7 @@
 <html lang="en">
   <head>
     <title>Nefily App</title>
-
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background-attachment: scroll;
-        display: flex;
-      }
-
-      .main-container {
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        height: 100vh; /*This ensures that all height is taken: no white space*/
-        min-height: 780px;
-        height: auto; /*Height grows as more products are added*/
-        border: 1px solid rgb(173, 173, 173);
-        border-radius: 10px;
-        display: flex;
-      }
-
-      .top-container {
-        width: 100%;
-        height: 85px;
-        display: flex;
-      }
-
-      .top-left-div {
-        width: 75px;
-        height: 85px;
-        border-right: 1px solid rgb(183, 183, 183);
-        border-bottom: 1px solid rgb(156, 156, 156);
-      }
-
-      .logo-image {
-        margin-top: 25px;
-        margin-left: 20px;
-      }
-
-      .top-right-div {
-        flex: 1;
-        height: 85px;
-        border-bottom: 1px solid rgb(156, 156, 156);
-      }
-
-      .top-right-div-para {
-        font-size: 28px;
-        padding-top: 25px;
-        padding-left: 20px;
-        font-weight: bold;
-        font-family: Arial;
-      }
-
-      .bottom-container {
-        width: 100%;
-        flex: 1;
-        display: flex;
-      }
-
-      .bottom-left-div {
-        width: 75px;
-        border-right: 1px solid rgb(183, 183, 183);
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-      }
-
-      .mainMenu-image {
-        margin-top: 15px;
-      }
-
-      .contaierOfAvatarAndSettings {
-        width: 40px;
-        height: 100px;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 5px;
-      }
-
-      .bottom-right-div {
-        flex: 1; /*This is for width. No need to give flex: 1; to height as .bottom-container is already does it*/
-        flex-direction: column;
-        display: flex;
-      }
-
-      .bottom-right-upper-div {
-        height: 90px;
-        border-bottom: 1px solid red;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .bottom-right-top-searching-div {
-        width: 300px;
-        height: 45px;
-        border: 1px solid rgb(163, 163, 163);
-        border-radius: 5px;
-        margin-left: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-      
-      .input-element {
-        font-size: 18px;
-        border: none; 
-        margin-left: 7px;
-      }
-      .input-element:focus {
-        outline: none;
-      }
-
-      .bottom-right-top-right-div {
-        display: flex;
-        width: 350px; 
-        height: 90px; 
-        flex-direction: row; 
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .total-orders-div {
-        width: 175px;
-        height: 45px;
-        border: 1px solid rgb(207, 207, 207);
-        border-radius: 10px;
-        margin-left: 13px;
-        align-items: center;
-        display: flex;
-      }
-
-      .time-div {
-        width: 120px;
-        height: 45px;
-        border: 1px solid rgb(207, 207, 207);
-        border-radius: 10px;
-        margin-right: 20px;
-        align-items: center;
-        display: flex;
-      }
-
-      .bottom-right-lower-div {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
-        overflow: hidden; /* Ensures no content overflows */
-        
-      }
-
-      .products-container-1 {
-        margin-top: 17px;
-        margin-left: 17px;
-        margin-right: 10px;
-        margin-bottom: 17px;
-        width: 370px;
-        height: 1980px;
-        transition: 0.5s ease-in-out;
-      }
-      .products-container-1:hover {
-        transform: scale(1.04, 1.015);  /* Width increases 10%, Height increases 30% */
-      }
-      .products-container-1-head {
-        display: flex;
-        width: 368px;
-        height: 60px;
-        background-color: rgb(14, 115, 246);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-      }
-      .products-container-1-body {
-        display: flex;
-        width: 368px;
-        height: 1920px;
-        background-color: rgb(245, 245, 245);
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .products-container-2 {
-        margin-top: 17px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 17px;
-        width: 370px;
-        transition: 0.5s ease-in-out;
-      }
-      .products-container-2:hover {
-        transform: scale(1.04, 1.015);  /* Width increases 10%, Height increases 30% */
-      }
-      .products-container-2-head {
-        display: flex;
-        width: 368px;
-        height: 60px;
-        background-color: rgb(248, 197, 27);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-      }
-      .products-container-2-body {
-        width: 368px;
-        height: 886px;
-        background-color: rgb(245, 245, 245);
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      
-
-      .products-container-3 {
-        margin-top: 17px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 17px;
-        width: 370px;
-        transition: 0.5s ease-in-out;
-      }
-      .products-container-3:hover {
-        transform: scale(1.04, 1.015);  /* Width increases 10%, Height increases 30% */
-      }
-      .products-container-3-head {
-        display: flex;
-        width: 368px;
-        height: 60px;
-        background-color: rgb(34, 195, 72);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-      }
-      .products-container-3-body {
-        width: 368px;
-        height: 1030px;
-        background-color: rgb(245, 245, 245);
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
-
-      .products-container-4 {
-        margin-top: 17px;
-        margin-left: 10px;
-        margin-right: 17px;
-        margin-bottom: 17px;
-        width: 370px;
-        transition: 0.5s ease-in-out;
-      }
-      .products-container-4:hover {
-        transform: scale(1.04, 1.015);  /* Width increases 10%, Height increases 30% */
-      }
-      .products-container-4-head {
-        display: flex;
-        width: 368px;
-        height: 60px;
-        background-color: rgb(26, 193, 157);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-      }
-      .products-container-4-body {
-        width: 368px;
-        height: 370px;
-        background-color: rgb(245, 245, 245);
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
-
-
-      .product-info-dev-1 {
-        margin-top: 20px;
-        width: 331px;
-        height: 345px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 10px;
-        border: 1px solid rgb(216, 216, 216);
-        transition: 0.6s ease-in-out;
-        color: black;
-      }
-      .product-info-dev-1:hover {
-        transform: scale(1.06);
-      }
-      .product-info-dev-1-style-top {
-        width: 298px; 
-        height: 60px; 
-        border-bottom: 2px solid rgb(212, 212, 212);
-        margin-top: 3px; 
-        margin-left: 14px;
-        margin-right: 14px;
-        align-items: center;
-        display: flex;
-        font-weight: bold;
-      }
-      .product-info-dev-1-style-bottom {
-        width: 298px; 
-        height: 190px;
-        border-bottom: 2px solid rgb(212, 212, 212);
-        margin-top: 3px; 
-        margin-left: 14px;
-        margin-right: 14px;
-        align-items: start;
-        display: flex;
-        flex-direction: column;
-      }
-      .cancel-button {
-        width: 140px; 
-        height: 40px;
-        color: rgb(212, 3, 3);
-        font-family: Arial;
-        font-weight: bolder;
-        border: 0.2px solid red;
-        border-radius: 10px;
-        margin-top: 22px;
-        margin-left: 18px;
-        margin-bottom: 18px;
-        background-color: white;
-        cursor: pointer;
-      }
-      .cancel-button:hover {
-        background-color: rgb(255, 243, 243);
-        transition: 0.2s ease-in-out;
-        box-shadow: 0px 0px 5px rgb(247, 183, 183);
-      }
-      .accept-button {
-        width: 140px; 
-        height: 40px;
-        color: white;
-        font-family: Arial;
-        font-weight: bolder;
-        border: none;
-        border-radius: 10px;
-        margin: 10px;
-        background-color: rgb(25, 118, 210);
-        box-shadow: 0px 0px 2px gray;
-        cursor: pointer;
-      }
-      .accept-button:hover {
-        background-color: rgb(8, 104, 201);
-        transition: 0.3s ease-in-out;
-        box-shadow: 0px 0px 5px gray;
-      }
-    </style>
+    <link rel="stylesheet" href="main.css">
   </head>
 
   <body>
@@ -414,7 +64,7 @@
                     <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321540
                     </p>
                     <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
-                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 560 Sum</p>
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 20px;">300 560 Sum</p>
                     <img src="/nefilyApp/images/payme-icon.png" style="width: 17px; height: 17px; margin-left: 7px;">
                     <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                   </div>
@@ -442,7 +92,7 @@
                     <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321541
                     </p>
                     <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
-                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">300 570 Sum</p>
                     <img src="/nefilyApp/images/apelsin-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                     <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                   </div>
@@ -468,7 +118,7 @@
                     <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321542
                     </p>
                     <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
-                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 20px;">300 570 Sum</p>
                     <img src="/nefilyApp/images/card-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                     <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                   </div>
@@ -494,7 +144,7 @@
                     <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321543
                     </p>
                     <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
-                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 20px;">300 570 Sum</p>
                     <img src="/nefilyApp/images/cash-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                     <img src="/nefilyApp/images/walk-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                   </div>
@@ -523,7 +173,7 @@
                     <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321544
                     </p>
                     <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
-                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">300 570 Sum</p>
                     <img src="/nefilyApp/images/click-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                     <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                   </div>
@@ -552,12 +202,12 @@
                 <p style="font-size: 25px; margin: 15px; color: white; font-family: Arial;">Blank (3)</p>
               </div>
               <div class="products-container-2-body">
-                <div class="product-info-dev-1" style="min-height: 365px;">
+                <div class="product-info-dev-1" style="min-height: 355px; height: auto;">
                   <div class="product-info-dev-1-style-top">
                     <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 320648
                     </p>
                     <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
-                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">300 570 Sum</p>
                     <img src="/nefilyApp/images/card-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                     <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                   </div>
@@ -568,38 +218,76 @@
                     <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
                     <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
                       <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
-                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:20</p>
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">15:22</p>
                     </div>
                   </div>
+
+                  <div class="comments">
+                    <div class="comment-header" style="width: 308px; height: 60px; display: flex; align-items: center;" onclick="func();">
+                      <span style="margin-left: 25px;">Comments(1)</span>
+                      <button style="width: 29px; height: 23px; display: inline-block; margin-left: 11px; border-radius: 12px; background-color: rgb(25, 118, 210); border: none; color: white; font-size: 16px;">+3
+                      </button> 
+                      <div class="arrow-image" style="width: 14px; height: 14px; margin-left: 100px;">
+                        <img src="/nefilyApp/images/down-arrow.png" style="width: 12px; height: 12px;">
+                      </div>
+                      <span></span>
+                    </div>
+
+                    <div class="comment-list">
+                      <p style="margin-top: 30px;">one</p>
+                      <p>two</p>
+                      <p>three</p>
+                    </div>
+                  </div>
+
+                  <button class="complete-button" style="margin-left: 15px; margin-bottom: 25px; cursor: pointer;">
+                    Ready
+                  </button>
                 </div>
 
-                <div class="product-info-dev-1">
+                <div class="product-info-dev-1" style="height: 265px;">
                   <div class="product-info-dev-1-style-top">
-                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 321542
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 320649
                     </p>
                     <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
-                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 15px;">300 570 Sum</p>
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">176 000 Sum</p>
                     <img src="/nefilyApp/images/card-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                     <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
                   </div>
 
-                  <div class="product-info-dev-1-style-bottom">
-                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">3 x Pepsi 0.5</p>
-                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Hamburger</p>
+                  <div class="product-info-dev-1-style-bottom" style="border: none;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Big Hamburger</p>
                     <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
                     <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">4 x Pepsi 0.5</p>
                     <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
-                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 12px; margin-left: 235px;">
                       <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
-                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:20</p>
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:10</p>
                     </div>
                   </div>
-
-                  <button class="cancel-button">CANCEL</button>
-                  <button class="accept-button">ACCEPT</button>
                 </div>
 
+                <div class="product-info-dev-1" style="height: 200px; margin-bottom: 35px;">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 320650
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">80 570 Sum</p>
+                    <img src="/nefilyApp/images/card-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/car-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
 
+                  <div class="product-info-dev-1-style-bottom" style="height: 130px; border: none;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Big Hamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">17:44</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -607,18 +295,132 @@
               <div class="products-container-3-head">
                 <p style="font-size: 25px; margin: 15px; color: white; font-family: Arial;">Ready (4)</p>
               </div>
-              <div class="products-container-3-body"></div>
+              <div class="products-container-3-body">
+                <div class="product-info-dev-1" style="height: 155px;">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 319610
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">312 630 Sum</p>
+                    <img src="/nefilyApp/images/cash-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/walk-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom" style="height: 130px; border: none;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">14:15</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-info-dev-1" style="height: 340px;">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 319611
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">325 000 Sum</p>
+                    <img src="/nefilyApp/images/cash-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom" style="height: 260px; border: none;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Big Gamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">4 x Pepsi 0.5</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Double Burger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">17:15</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-info-dev-1" style="height: 155px;">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 319612
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">31 230 Sum</p>
+                    <img src="/nefilyApp/images/cash-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom" style="height: 130px; border: none;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:13</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-info-dev-1" style="height: 235px;">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 319613
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">17 000 Sum</p>
+                    <img src="/nefilyApp/images/cash-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/walk-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom" style="height: 130px; border: none;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">17:05</p>
+                    </div>
+                    <button class="complete-button">
+                      Complete
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="products-container-4">
               <div class="products-container-4-head">
                 <p style="font-size: 25px; margin: 15px; color: white; font-family: Arial;">Courier on the way (1)</p>
               </div>
-              <div class="products-container-4-body"></div>
+              <div class="products-container-4-body">
+                <div class="product-info-dev-1" style="height: 340px;">
+                  <div class="product-info-dev-1-style-top">
+                    <p style=" font-size: 20px; font-family: Arial; margin-left: 3px; display: inline-block;">ID: 319587
+                    </p>
+                    <img src="/nefilyApp/images/info-icon.png" style="width: 20px; height: 20px; margin-left: 13px;">
+                    <p style="font-family: Arial; color: rgb(85, 85, 85); margin-left: 22px;">325 000 Sum</p>
+                    <img src="/nefilyApp/images/walk-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                    <img src="/nefilyApp/images/home-icon.png" style="width: 15px; height: 15px; margin-left: 7px;">
+                  </div>
+
+                  <div class="product-info-dev-1-style-bottom" style="height: 260px; border: none;">
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Big Gamburger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">4 x Pepsi 0.5</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">2 x Meat lavash Standard spicy</p>
+                    <p style="font-size: 18px; margin-top: 10px; font-family: Arial;">1 x Double Burger</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">With cheese</p>
+                    <p style="font-size: 12px; margin-top: 10px; font-family: Arial; margin-left: 30px;">No bow</p>
+                    <div style="width: 70px; height: 30px; display: flex; align-items: center; margin-top: 8px; margin-left: 235px;">
+                      <img src="/nefilyApp/images/clock-timer-icon.png" style="width: 15px; height: 15px;">
+                      <p style="display: inline-block; margin-left: 9px; font-family: Arial; font-size: 14px;">18:15</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>   
     </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
