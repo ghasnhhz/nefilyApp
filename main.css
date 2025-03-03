@@ -192,7 +192,7 @@ body {
 }
 .products-container-1-head {
   display: flex;
-  width: 368px;
+  width: 360px;
   height: 60px;
   background-color: rgb(14, 115, 246);
   border-top-left-radius: 10px;
@@ -201,7 +201,7 @@ body {
 }
 .products-container-1-body {
   display: flex;
-  width: 368px;
+  width: 360px;
   height: 1930px;
   background-color: rgb(245, 245, 245);
   border-bottom-right-radius: 10px;
@@ -226,7 +226,7 @@ body {
 }
 .products-container-2-head {
   display: flex;
-  width: 368px;
+  width: 360px;
   height: 60px;
   background-color: rgb(248, 197, 27);
   border-top-left-radius: 10px;
@@ -260,14 +260,14 @@ body {
 }
 .products-container-3-head {
   display: flex;
-  width: 368px;
+  width: 360px;
   height: 60px;
   background-color: rgb(34, 195, 72);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 .products-container-3-body {
-  width: 368px;
+  width: 360px;
   height: 1000px;
   background-color: rgb(245, 245, 245);
   border-bottom-right-radius: 10px;
@@ -292,14 +292,14 @@ body {
 }
 .products-container-4-head {
   display: flex;
-  width: 368px;
+  width: 360px;
   height: 60px;
   background-color: rgb(26, 193, 157);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 .products-container-4-body {
-  width: 368px;
+  width: 360px;
   height: 395px;
   background-color: rgb(245, 245, 245);
   border-bottom-right-radius: 10px;
