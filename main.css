@@ -107,7 +107,7 @@ body {
 }
 
 .bottom-right-div {
-  flex: 1; /*This is for width. No need to give flex: 1; to height as .bottom-container is already does it*/
+  flex: 1; /*This is for width. No need to give flex: 1; to height as .bottom-container already does it*/
   flex-direction: column;
   display: flex;
 }
@@ -179,7 +179,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  overflow: hidden; /* Ensures no content overflows */
+  /* Ensures no content overflows */
   
 }
 
